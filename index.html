@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/cango.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link type="text/script" href="script/cango.js">
+</head>
+<body>
+
+  <ul>
+    <li><a class="navbar-brand"><img alt="CanGo Network" src="img/logo.png"></a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">Message</a></li>
+    <li><a href="#contact">People</a></li>
+
+    <li style="float:right"><a  href="#about">Profile</a></li>
+    <li style="float:right"><a  href="#about">Logout</a></li>
+  </ul>
+
+<button class="open-button" onclick="openForm()">Add Details</button>
+
+<div class="form-popup" id="myForm">
+  <form  class="form-container" method="post" id="form">
+    <h1>Employee Details</h1>
+
+    <label for="email" id="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="empname" id= "empname"><b>Emp Name</b></label>
+    <input type="text" placeholder="Enter Emp_Name" name="empname" required>
+
+        <label for="empid" id="empid"><b>Emp ID</b></label>
+        <input type="text" placeholder="Enter Emp_id" name="empid" required>
+
+        <label for="designation" id="desgn"><b>Designation</b></label>
+        <select id="desgn" placeholder="Choose Designation" name="desgn">
+          <option>--Choose Designation--</option>
+          <option value="Developer">Developer</option>
+          <option value="Testing">Testing</option>
+        </select><br>
+        <input type="radio" id="gender" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="gender" name="gender" value="female">
+<label for="female">Female</label><br>
+<button type="ratings" class="btn1">Ratings</button>
+<div class="rating id ="stars"">
+  <label >
+    <input type="radio" name="stars" value="1" />
+    <span class="icon">★</span>
+  </label>
+  <label>
+    <input type="radio" name="stars" value="2" />
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+  </label>
+  <label>
+    <input type="radio" name="stars" value="3" />
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+  </label>
+  <label>
+    <input type="radio" name="stars" value="4" />
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+  </label>
+  <label>
+    <input type="radio" name="stars" value="5" />
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+    <span class="icon">★</span>
+  </label>
+</div>
+          <button type="submit" class="btn" onclick="closeForm()">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+  </form>
+</div><br><br><br>
+<div class="container">
+  <table class="table table-dark table-hover" id="employees-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<script src="script/cango.js"></script>
+</body>
+</html>
